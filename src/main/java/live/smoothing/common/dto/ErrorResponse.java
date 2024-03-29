@@ -11,11 +11,40 @@ public class ErrorResponse {
     private final String errorMessage;
     private final String path;
 
-    public ErrorResponse(HttpStatus status, String errorMessage, String path) {
-
+    private ErrorResponse(Builder builder) {
         this.timeStamp = DateFormatter.formatDateTime(LocalDateTime.now());
-        this.status = status;
-        this.errorMessage = errorMessage;
-        this.path = path;
+        this.status = builder.status;
+        this.errorMessage = builder.errorMessage;
+        this.path = builder.path;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static class Builder {
+        private String timeStamp;
+        private HttpStatus status;
+        private String errorMessage;
+        private String path;
+
+        public Builder status(HttpStatus status) {
+            this.status = status;
+            return this;
+        }
+
+        public Builder errorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+
+        public Builder path(String path) {
+            this.path = path;
+            return this;
+        }
+
+        public ErrorResponse build() {
+            return new ErrorResponse(this);
+        }
     }
 }

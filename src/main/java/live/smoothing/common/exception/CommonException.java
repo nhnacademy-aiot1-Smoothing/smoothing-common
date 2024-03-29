@@ -20,6 +20,10 @@ public class CommonException extends RuntimeException {
 
     public ErrorResponse toEntity(String path) {
 
-        return new ErrorResponse(status, errorMessage, path);
+        return ErrorResponse.builder()
+                .status(status)
+                .path(path)
+                .errorMessage(errorMessage)
+                .build();
     }
 }
