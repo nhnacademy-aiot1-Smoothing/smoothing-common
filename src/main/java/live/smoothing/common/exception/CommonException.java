@@ -14,6 +14,10 @@ public class CommonException extends RuntimeException {
         this.errorMessage = errorMessage;
     }
 
+    public HttpStatus getStatus(){
+        return status;
+    }
+
     public ErrorResponse toEntity(String path) {
 
         return new ErrorResponse(status, errorMessage, path);
