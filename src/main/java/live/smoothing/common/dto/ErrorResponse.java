@@ -47,4 +47,20 @@ public class ErrorResponse {
             return new ErrorResponse(this);
         }
     }
+
+    public String getTimeStamp(){
+        return timeStamp;
+    }
+
+    public HttpStatus getStatus(){
+        return status;
+    }
+
+    public String getErrorMessage(){
+        return errorMessage;
+    }
+
+    public String getPath(){
+        return path;
+    }
 }
