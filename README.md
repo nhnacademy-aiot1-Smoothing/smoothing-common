@@ -7,9 +7,7 @@
 <br>
 <div>
 <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
-<br>
 <img src="https://img.shields.io/badge/spring boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">
-<br>
 <img src="https://img.shields.io/badge/jitpack-000000?style=for-the-badge&logo=jitpack&logoColor=white">
 </div>
 <br>
